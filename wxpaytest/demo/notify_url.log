@@ -1,0 +1,47 @@
+执行日期：2014-10-14 19:24:03
+【接收到的notify通知】:
+<xml><appid><![CDATA[wxae0965739820767b]]></appid>
+<attach><![CDATA[MjAxNDEwMTQxOTIyMDA1NDY4QEBAQ2FyZEBAQG5kY3FvYzE0MTI1MjIzMzNAQEBvNl9sS3M1SjdacnJCSDRqWVVlVWdmTXByUmpR]]></attach>
+<bank_type><![CDATA[CMB_DEBIT]]></bank_type>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[10011828]]></mch_id>
+<nonce_str><![CDATA[w2f9ng735mge3uxyqm1bi47arwd42luw]]></nonce_str>
+<openid><![CDATA[o6_lKs5J7ZrrBH4jYUeUgfMprRjQ]]></openid>
+<out_trade_no><![CDATA[wxae0965739820767b1413285833]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[22E748A71E8DA5B65845F53F9EC96D68]]></sign>
+<sub_mch_id><![CDATA[10011828]]></sub_mch_id>
+<time_end><![CDATA[20141014192401]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[1007190180201410140005327734]]></transaction_id>
+</xml>
+
+
+执行日期：2014-10-14 19:24:03
+【支付成功】:
+<xml><appid><![CDATA[wxae0965739820767b]]></appid>
+<attach><![CDATA[MjAxNDEwMTQxOTIyMDA1NDY4QEBAQ2FyZEBAQG5kY3FvYzE0MTI1MjIzMzNAQEBvNl9sS3M1SjdacnJCSDRqWVVlVWdmTXByUmpR]]></attach>
+<bank_type><![CDATA[CMB_DEBIT]]></bank_type>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[10011828]]></mch_id>
+<nonce_str><![CDATA[w2f9ng735mge3uxyqm1bi47arwd42luw]]></nonce_str>
+<openid><![CDATA[o6_lKs5J7ZrrBH4jYUeUgfMprRjQ]]></openid>
+<out_trade_no><![CDATA[wxae0965739820767b1413285833]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[22E748A71E8DA5B65845F53F9EC96D68]]></sign>
+<sub_mch_id><![CDATA[10011828]]></sub_mch_id>
+<time_end><![CDATA[20141014192401]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[1007190180201410140005327734]]></transaction_id>
+</xml>
+
+
+执行日期：2014-10-14 19:24:03
+$to_url-->http://www.stg.cn/index.php?
+

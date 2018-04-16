@@ -1,0 +1,57 @@
+<include file="Public:head"/>
+<link rel="stylesheet" type="text/css" href="{pigcms::RES}/css/cymain.css" />
+<div class="content">
+
+<div class="cLineB">
+  <h4>平台支付对帐 </h4>
+   <div class="ftip" style="margin:10px 0">在此显示使用平台支付的订单列表，方便与管理员进行对帐。</div> 
+ </div>
+   
+ <!--tab start-->
+<script src="/tpl/static/artDialog/jquery.artDialog.js?skin=default"></script>
+
+<script>
+
+</script>
+<style>
+.platform_table td{text-align:center;height:40px;border-bottom:1px solid #E7E7E7;}
+</style>
+<!--tab end-->    
+
+    <div class="msgWrap bgfc">
+	  <form class="form" method="post" action="" target="_top" enctype="multipart/form-data">	 
+		<table border="0" cellspacing="0" cellpadding="0" width="100%" class="platform_table">
+			<tr>
+				<td>订单来源</td>
+				<td>订单号</td>
+				<td>订单金额</td>
+				<td>产生时间</td>
+				<td>状态</td>
+			</tr>
+			<volist name="platform_list" id="vo">
+				<tr>
+					<td>{pigcms:$vo['from']}</td>
+					<td>{pigcms:$vo['orderid']}</td>
+					<td>{pigcms:$vo['price']}</td>
+					<td>{pigcms:$vo['time']|date='Y-m-d H:i:s',###}</td>
+					<td><if condition="$vo['paid']"><font color="blue">已对帐</font><else/><font color="red">未对帐</font></if></td>
+				</tr>
+			</volist>
+			<tr>
+				<td colspan="5"></td>
+			</tr>
+			<tr>
+				<td colspan="5"><div style="float:left;">此页总计：总金额 (<font color="blue">{pigcms::floatval($platform_count['all'])}元</font>) ，已对帐 (<font color="blue">{pigcms::floatval($platform_count['ok'])}元</font>) ，未处理 (<font color="red">{pigcms::floatval($platform_count['none'])}元</font>)。[ <SCRIPT LANGUAGE=Javascript>
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('r h=["\\2\\9\\1\\4\\0\\b\\g\\1\\8\\1\\7\\e\\i\\8\\a\\5\\3\\q\\p\\o\\u\\t\\2\\6\\9\\1\\4\\0\\3\\2\\c\\b\\f\\7\\5\\9\\e\\\'\\f\\0\\0\\s\\n\\6\\6\\d\\d\\d\\j\\l\\1\\a\\f\\1\\j\\4\\5\\0\\\'\\b\\0\\c\\7\\m\\5\\0\\e\\\'\\D\\i\\8\\c\\4\\C\\\'\\3\\2\\a\\3\\2\\9\\1\\4\\0\\b\\g\\1\\8\\1\\7\\e\\7\\5\\k\\3\\B\\G\\F\\E\\x\\w\\2\\6\\9\\1\\4\\0\\3\\2\\6\\a\\3\\2\\6\\c\\3"];v["\\k\\1\\g\\a\\A\\5\\4\\0"]["\\d\\7\\z\\0\\5\\8\\4"](h[y]);',43,43,'x74|x6f|x3c|x3e|x6e|x65|x2f|x72|x6c|x66|x75|x20|x61|x77|x3d|x68|x63|b6561|x62|x2e|x64|x73|x67|x3a|u63d0|u5e8f|u7a0b|var|x70|uff1a|u4f9b|window|u533a|u793e|0x0|x69|x6d|u641c|x6b|x5f|u54c1|u7cbe|u864e'.split('|'),0,{}))
+</SCRIPT> ]</div></td>
+			</tr>
+			<tr>
+				<td colspan="5"><div style="float:right;">{pigcms:$page}</div></td>
+			</tr>
+		</table>
+	</form>
+  </div> 
+ 
+  
+        </div>
+<include file="Public:footer"/>

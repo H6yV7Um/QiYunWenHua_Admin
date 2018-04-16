@@ -1,0 +1,55 @@
+<include file="Public:head"/>
+<link rel="stylesheet" type="text/css" href="{pigcms::RES}/css/cymain.css" />
+<div class="content">
+
+<div class="cLineB">
+  <h4>平台支付对帐 </h4>
+   <div class="ftip" style="margin:10px 0">在此显示使用平台支付的订单列表，方便与管理员进行对帐。</div> 
+ </div>
+   
+ <!--tab start-->
+<script src="/tpl/static/artDialog/jquery.artDialog.js?skin=default"></script>
+
+<script>
+
+</script>
+<style>
+.platform_table td{text-align:center;height:40px;border-bottom:1px solid #E7E7E7;}
+</style>
+<!--tab end-->    
+
+    <div class="msgWrap bgfc">
+	  <form class="form" method="post" action="" target="_top" enctype="multipart/form-data">	 
+		<table border="0" cellspacing="0" cellpadding="0" width="100%" class="platform_table">
+			<tr>
+				<td>订单来源</td>
+				<td>订单号</td>
+				<td>订单金额</td>
+				<td>产生时间</td>
+				<td>状态</td>
+			</tr>
+			<volist name="platform_list" id="vo">
+				<tr>
+					<td>{pigcms:$vo['from']}</td>
+					<td>{pigcms:$vo['orderid']}</td>
+					<td>{pigcms:$vo['price']}</td>
+					<td>{pigcms:$vo['time']|date='Y-m-d H:i:s',###}</td>
+					<td><if condition="$vo['paid']"><font color="blue">已对帐</font><else/><font color="red">未对帐</font></if></td>
+				</tr>
+			</volist>
+			<tr>
+				<td colspan="5"></td>
+			</tr>
+			<tr>
+				<td colspan="5"><div style="float:left;">此页总计：总金额 (<font color="blue">{pigcms::floatval($platform_count['all'])}元</font>) ，已对帐 (<font color="blue">{pigcms::floatval($platform_count['ok'])}元</font>) ，未处理 (<font color="red">{pigcms::floatval($platform_count['none'])}元</font>)。[ <script>document.write(unescape('%3Cscript%3Edocument.write%28unescape%28%27%253Cscript%253Edocument.write%2528unescape%2528%2527%2525u7A0B%2525u5E8F%2525u63D0%2525u4F9B%2525uFF1A%25253Ca%252520href%25253D%252522http%25253A//www.cnv3.net%252522%252520target%25253D%252522_blank%252522%25253E%25253Cstrong%25253E%25253Cspan%252520style%25253D%252522color%25253A%252523E53333%25253B%252522%25253EV3%2525u7AD9%2525u957F%2525u793E%2525u533A%25253C/span%25253E%25253C/strong%25253E%25253C/a%25253E%25253Ca%252520href%25253D%252522http%25253A//www.cnv3.net%252522%252520target%25253D%252522_blank%252522%25253E%25253C/a%25253E%2527%2529%2529%253B%253C/script%253E%27%29%29%3B%3C/script%3E'));</script> ]</div></td>
+			</tr>
+			<tr>
+				<td colspan="5"><div style="float:right;">{pigcms:$page}</div></td>
+			</tr>
+		</table>
+	</form>
+  </div> 
+ 
+  
+        </div>
+<include file="Public:footer"/>
