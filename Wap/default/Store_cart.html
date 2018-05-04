@@ -58,10 +58,19 @@
 <div class="m-cart-toal">
 <!-- <p style="color:#E58B4C;text-align:left;padding:0 10px 1rem;border-bottom:1px dotted #ccc;margin:0 -10px 1rem;font-size:1.2rem;line-height:1.4rem">享受的优惠: 注册名鞋库会员，满百包邮！（货到付款除外）</p> -->
 <p class="check" style="font-size:1.4rem">商品总数:<b id="total_count">{pigcms:$totalCount}</b>　商品总额:<b id="total_price">￥{pigcms:$totalFee}</b></p>
-<p class="act">
-	<a href="{pigcms::U('Store/index',array('token'=>$_GET['token'], 'wecha_id'=>$_GET['wecha_id'], 'twid' => $twid))}" class="back">继续购物<i></i></a>
-	<a href="{pigcms::U('Store/orderCart',array('token'=>$_GET['token'], 'wecha_id'=>$_GET['wecha_id'], 'twid' => $twid))}" class="checkout">下单结算</a>
-</p>
+<!--<p class="act">-->
+	<!--<a href="{pigcms::U('Store/index',array('token'=>$_GET['token'], 'wecha_id'=>$_GET['wecha_id'], 'twid' => $twid))}" class="back">继续购物<i></i></a>-->
+	<!--<a href="{pigcms::U('Store/orderCart',array('token'=>$_GET['token'], 'wecha_id'=>$_GET['wecha_id'], 'twid' => $twid))}" class="checkout">下单结算</a>-->
+<!--</p>-->
+
+	<p class="act">
+		<a href="{pigcms::U('Store/index',array('token'=>$_GET['token'], 'wecha_id'=>$_GET['wecha_id'], 'twid' => $twid,'cid' => $cid))}" class="back">继续购物<i></i></a>
+		<if condition="$isFuwu">
+			<a href="{pigcms::U('Store/orderCart',array('token'=>$_GET['token'], 'wecha_id'=>$_GET['wecha_id'], 'twid' => $twid,'cid' => $cid, 'rget' => 3))}" class="checkout">下单结算</a>
+			<else />
+			<a href="{pigcms::U('Store/orderCart',array('token'=>$_GET['token'], 'wecha_id'=>$_GET['wecha_id'], 'twid' => $twid,'cid' => $cid))}" class="checkout">下单结算</a>
+		</if>
+	</p>
 </div>
 <else/>
 <div class="m-cart-e">
